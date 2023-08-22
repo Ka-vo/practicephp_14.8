@@ -1,11 +1,15 @@
 <?php
 function getUsersList()
 {
-  return [
-    'Gena Buckin' => sha1('туфли'),
-    '1' => sha1('1'),
-    'Boris Britva' => sha1('хренпопадешь'),
-  ];
+  $file = 'C:\OpenServer\domains\localhost\practicePHP14.8\credentails.json';
+  $json_array = json_decode(file_get_contents($file), true);
+
+  return  $json_array;
+  // return [
+  //   'Gena Buckin' => sha1('туфли'),
+  //   '1' => sha1('1'),
+  //   'Boris Britva' => sha1('хренпопадешь'),
+  // ];
 }
 //print_r(getUsersList());
 //echo "<pre>";

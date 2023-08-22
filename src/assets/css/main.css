@@ -2,11 +2,51 @@
   --header-font: 'Dancing Script', cursive;
 }
 
-h1 {
+
+.title {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: var(--header-font);
   font-size: 30px;
-  margin-top: 50px;
+}
+
+.title p {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 100px;
+  width: 130px;
+}
+
+.logo img:hover {
+  cursor: pointer;
+}
+
+
+
+
+nav h2 {
+  font-family: var(--header-font);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+nav ol li {
+  font-family: var(--header-font);
+  color: black;
+  padding-bottom: 15px;
+
 }
 
 .container {
@@ -23,7 +63,7 @@ h1 {
 }
 
 .form {
-  margin-top: 250px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,10 +83,12 @@ input {
 }
 
 .input {
-  padding-left: 50px;
-  padding-right: 50px;
+  font-family: var(--header-font);
+  color: black;
+  padding: 10px;
   cursor: pointer;
   background-color: #d8c3a5;
+  border-radius: 4px;
 }
 
 .input:hover {
@@ -56,25 +98,65 @@ input {
 
 body {
   background-image: url(../images/mainBackround.avif);
-  /* height: 100px; */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.suggestions {
+.content-suggestions {
   display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-.text {
-  width: 300px;
+.content-text {
+  width: 200px;
+  margin-left: 30px;
 }
 
-.text h2 {
+.content-text h2 {
   font-family: var(--header-font);
   font-size: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+
+}
+
+.img {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 60px;
+}
+
+.img img {
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--header-font);
+
+}
+
+.menu ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer {
+  height: 30px;
 }
