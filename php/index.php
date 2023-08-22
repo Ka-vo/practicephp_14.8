@@ -1,7 +1,14 @@
 <?php
 require "functions.php";
-session_start(); ?>
+session_start();
+$currentTime = time() + 24 * 60 * 60;
 
+if (empty($_SESSION['time'])) {
+  $_SESSION['time'] = $currentTime;
+}
+
+$timeSale = formatTime($_SESSION['time'] - time());
+?>
 
 
 <head>
@@ -24,7 +31,7 @@ session_start(); ?>
   <div class="container">
 
     <div class="title">
-      <p class="username"> <?php echo "Hello, " . $_SESSION['login'] ?></p>
+      <p class="username"> <?= "Hello, " . $_SESSION['login'] . "! Для Вас действует персональная скидка 50%, до окончания акции " . $timeSale ?> </p>
       <h1>SPA-салон Lorem.</h1>
     </div>
     <div class="content-suggestions">
